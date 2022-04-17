@@ -77,21 +77,6 @@ def create_app():
     log_file = os.path.join(logdir, 'info.log')
 
 
-    @app.before_request
-    def start_timer():
-        g.start = time.time()
-
-    @app.after_request
-    def log_request(response):
-        if request.path == '/favicon.ico':
-            return response
-        elif request.path.startswith('/static'):
-            return response
-        elif request.path.startswith('/bootstrap'):
-            return response
-
-        return response
-
     return app
 
 
