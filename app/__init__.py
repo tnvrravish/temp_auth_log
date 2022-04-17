@@ -31,14 +31,7 @@ def page_not_found(e):
 
 
 class RequestFormatter(logging.Formatter):
-    def format(self, record):
-        if has_request_context():
-            pass
-        else:
-            pass
-
-        return super().format(record)
-
+    pass
 
 def create_app():
     """Create and configure an instance of the Flask application."""
