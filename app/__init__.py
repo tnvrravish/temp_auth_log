@@ -30,6 +30,9 @@ def page_not_found(e):
     return render_template("404.html"), 404
 
 
+class RequestFormatter(logging.Formatter):
+    pass
+
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
@@ -53,6 +56,9 @@ def create_app():
     app.cli.add_command(create_database)
     app.cli.add_command(create_log_folder)
 
+    # get root directory of project
+    root = os.path.dirname(os.path.abspath(__file__))
+    # set the name of the apps log folder to logs
     logdir = os.path.join(root, 'logs')
     # make a directory if it doesn't exist
     if not os.path.exists(logdir):
