@@ -53,9 +53,12 @@ def create_app():
     app.cli.add_command(create_database)
     app.cli.add_command(create_log_folder)
 
-    if True:
-        pass
-    # log_file = os.path.join(logdir, 'info.log')
+    logdir = os.path.join(root, 'logs')
+    # make a directory if it doesn't exist
+    if not os.path.exists(logdir):
+        os.mkdir(logdir)
+    # set name of the log file
+    log_file = os.path.join(logdir, 'info.log')
 
     return app
 
