@@ -26,10 +26,6 @@ from flask.logging import default_handler
 login_manager = flask_login.LoginManager()
 
 
-def page_not_found(e):
-    return render_template("404.html"), 404
-
-
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
