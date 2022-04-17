@@ -5,4 +5,6 @@
 
 
 [![Development Workflow](https://github.com/tnvrravish/logging_homework_temp/actions/workflows/dev.yml/badge.svg)](https://github.com/tnvrravish/logging_homework_temp/actions/workflows/dev.yml)
+
 * [Developmental Deployment](https://temp-dev.herokuapp.com/)
+
