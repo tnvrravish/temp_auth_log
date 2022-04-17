@@ -65,8 +65,6 @@ def create_app():
     app.cli.add_command(create_database)
     app.cli.add_command(create_log_folder)
 
-    # Deactivate the default flask logger so that log messages don't get duplicated
-    app.logger.removeHandler(default_handler)
 
     # get root directory of project
     root = os.path.dirname(os.path.abspath(__file__))
