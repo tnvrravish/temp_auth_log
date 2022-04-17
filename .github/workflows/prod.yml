@@ -39,7 +39,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: tnvrravish/logging_homework
+          images: tnvrravish/project_1
 
       - name: Build and push
         uses: docker/build-push-action@v2
