@@ -78,18 +78,6 @@ def create_app():
     # set name of the log file
     log_file = os.path.join(logdir, 'info.log')
 
-    handler = logging.FileHandler(log_file)
-    # Create a log file formatter object to create the entry in the log
-    formatter = RequestFormatter(
-        '[%(asctime)s] %(remote_addr)s requested %(url)s\n'
-        '%(levelname)s in %(module)s: %(message)s'
-    )
-    # set the formatter for the log entry
-    handler.setFormatter(formatter)
-    # Set the logging level of the file handler object so that it logs INFO and up
-    handler.setLevel(logging.INFO)
-    # Add the handler for the log entry
-    app.logger.addHandler(handler)
 
     @app.before_request
     def start_timer():
