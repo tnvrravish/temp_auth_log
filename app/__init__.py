@@ -30,9 +30,6 @@ def page_not_found(e):
     return render_template("404.html"), 404
 
 
-class RequestFormatter(logging.Formatter):
-    pass
-
 def create_app():
     """Create and configure an instance of the Flask application."""
     app = Flask(__name__)
