@@ -33,11 +33,9 @@ def page_not_found(e):
 class RequestFormatter(logging.Formatter):
     def format(self, record):
         if has_request_context():
-            record.url = request.url
-            record.remote_addr = request.remote_addr
+            pass
         else:
-            record.url = None
-            record.remote_addr = None
+            pass
 
         return super().format(record)
 
