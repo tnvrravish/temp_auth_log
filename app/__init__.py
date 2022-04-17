@@ -68,16 +68,6 @@ def create_app():
     # Deactivate the default flask logger so that log messages don't get duplicated
     app.logger.removeHandler(default_handler)
 
-    # get root directory of project
-    root = os.path.dirname(os.path.abspath(__file__))
-    # set the name of the apps log folder to logs
-    logdir = os.path.join(root, 'logs')
-    # make a directory if it doesn't exist
-    if not os.path.exists(logdir):
-        os.mkdir(logdir)
-    # set name of the log file
-    log_file = os.path.join(logdir, 'info.log')
-
 
     @app.before_request
     def start_timer():
